@@ -1,8 +1,12 @@
 #include <iostream>
+#include <omp.h>
 
 
 int main()
 {
-    std::cout << "Hello world!" << std::endl;
+#pragma omp paraller
+    {
+    	std::cout << "Hello world!" << std::endl;
+    }
     return 0;
 }
